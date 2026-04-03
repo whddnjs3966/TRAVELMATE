@@ -180,11 +180,13 @@ export interface Review {
 // ── AI Generation ──
 export interface GenerateTripRequest {
   destination: string;
-  destination_type: "domestic" | "international";
-  departure_city: string;
-  start_date: string;
-  end_date: string;
-  duration_nights: number;
+  destination_type?: "domestic" | "international";
+  departureCity?: string;
+  startDate?: string;
+  endDate?: string;
+  duration: number;
+  month: number;
+  styles?: string[];
 }
 
 export interface GenerateTripResponse {

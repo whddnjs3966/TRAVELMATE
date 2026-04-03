@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
+import { AppLayout } from "../components/app-layout";
 
 export const metadata: Metadata = {
   title: "TripFlow - 여행 플래너",
@@ -30,7 +31,9 @@ export default function RootLayout({
           href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css"
         />
       </head>
-      <body className="antialiased">{children}</body>
+      <body className="antialiased">
+        <AppLayout>{children}</AppLayout>
+      </body>
     </html>
   );
 }

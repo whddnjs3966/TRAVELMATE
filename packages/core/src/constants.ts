@@ -39,11 +39,10 @@ export const BUDGET_RANGES = [
 
 // ── Cache TTL (seconds) ──
 export const CACHE_TTL = {
-  FLIGHT_SEARCH: 30 * 60,        // 30분
+  FLIGHTS: 30 * 60,              // 30분
   WEATHER_CURRENT: 60 * 60,      // 1시간
   PLACES: 7 * 24 * 60 * 60,      // 7일
-  AI_ITINERARY: 24 * 60 * 60,    // 24시간
-  DESTINATION_INSPIRATION: 24 * 60 * 60, // 24시간
+  AI_SCHEDULE: 24 * 60 * 60,     // 24시간
 } as const;
 
 // ── Design Tokens ──

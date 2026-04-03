@@ -1,6 +1,7 @@
 import { Hono } from "hono";
 import { cors } from "hono/cors";
 import { logger } from "hono/logger";
+import { errorHandler } from "./lib/middleware";
 import { authRoutes } from "./routes/auth";
 import { flightRoutes } from "./routes/flights";
 import { tripRoutes } from "./routes/trips";
@@ -12,6 +13,7 @@ import { reviewRoutes } from "./routes/reviews";
 export type Env = {
   SUPABASE_URL: string;
   SUPABASE_ANON_KEY: string;
+  SUPABASE_SERVICE_ROLE_KEY: string;
   UPSTASH_REDIS_REST_URL: string;
   UPSTASH_REDIS_REST_TOKEN: string;
   AMADEUS_CLIENT_ID: string;
@@ -25,6 +27,7 @@ export type Env = {
 const app = new Hono<{ Bindings: Env }>();
 
 // Middleware
+app.use("*", errorHandler);
 app.use("*", logger());
 app.use(
   "*",
