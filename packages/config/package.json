@@ -1,0 +1,10 @@
+{
+  "name": "@tripflow/config",
+  "version": "0.1.0",
+  "private": true,
+  "main": "./eslint.config.mjs",
+  "files": [
+    "eslint.config.mjs",
+    "tsconfig.base.json"
+  ]
+}

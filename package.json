@@ -1,0 +1,27 @@
+{
+  "name": "tripflow",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "turbo dev",
+    "build": "turbo build",
+    "lint": "turbo lint",
+    "type-check": "turbo type-check",
+    "clean": "turbo clean",
+    "dev:web": "turbo dev --filter=@tripflow/web",
+    "dev:api": "turbo dev --filter=@tripflow/api",
+    "build:web": "turbo build --filter=@tripflow/web",
+    "build:api": "turbo build --filter=@tripflow/api"
+  },
+  "devDependencies": {
+    "turbo": "^2.4.0",
+    "typescript": "^5.7.0"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "packageManager": "npm@10.8.0"
+}

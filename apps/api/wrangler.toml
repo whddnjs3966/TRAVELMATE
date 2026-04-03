@@ -1,0 +1,16 @@
+name = "tripflow-api"
+main = "src/index.ts"
+compatibility_date = "2025-03-30"
+compatibility_flags = ["nodejs_compat"]
+
+# [vars]
+# SUPABASE_URL = ""
+# SUPABASE_ANON_KEY = ""
+# UPSTASH_REDIS_REST_URL = ""
+# UPSTASH_REDIS_REST_TOKEN = ""
+# AMADEUS_CLIENT_ID = ""
+# AMADEUS_CLIENT_SECRET = ""
+# OPENWEATHER_API_KEY = ""
+# GEMINI_API_KEY = ""
+# GOOGLE_PLACES_API_KEY = ""
+# KMA_API_KEY = ""
